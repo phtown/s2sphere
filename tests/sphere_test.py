@@ -786,7 +786,7 @@ class TestLineInterval(unittest.TestCase):
         self.assertEqual(LineInterval(99, 100),
                          empty.union(LineInterval(99, 100)))
         self.assertTrue(
-            LineInterval(5, 3).union(LineInterval(0, -2).is_empty()))
+            LineInterval(5, 3).union(LineInterval(0, -2)).is_empty())
         self.assertTrue(
             LineInterval(0, -2).union(LineInterval(5, 3)).is_empty())
         self.assertEqual(unit, unit.union(unit))
